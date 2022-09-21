@@ -25,7 +25,16 @@ def put_garbage():
             garbage_count += 1
             for i in range(consts.GARBAGE_WIDTH):
                 for j in range(consts.GARBAGE_WIDTH):
-                    earth[row+ j][col + i] = consts.GARBAGE
+                    earth[row + j][col + i] = consts.GARBAGE
+
+
+def garbage_indexes():
+    garbage_index = []
+    for row in range(consts.SCREEN_ROWS):
+        for col in range(consts.SCREEN_COLS):
+            if earth[row][col] == consts.GARBAGE:
+                garbage_index.append([col, row])
+    return garbage_index
 
 
 def unite_screen():
@@ -38,3 +47,6 @@ for m in range(consts.SCREEN_ROWS):
     for n in range(consts.SCREEN_COLS):
         print(earth[m][n], end=" ")
     print(" ")
+
+print(garbage_indexes())
+print(len(garbage_indexes()))
