@@ -37,14 +37,15 @@ def draw_win_message():
 
 
 def draw_first_message():
-    draw_message(consts.FIRST_MESSAGE, consts.FIRST_FONT_SIZE, (255, 255, 255), consts.FIRST_LOCATION)
+    draw_message(consts.FIRST_MESSAGE, consts.FIRST_FONT_SIZE, (0, 0, 0), consts.FIRST_LOCATION)
     pygame.display.update()
 
 def play():
     pygame.init()
     draw_window(consts.SCREEN_PIC)
     draw_man()
-    # draw_first_message()
+    draw_first_message()
+    pygame.time.wait(2000)
     finish = False
     while not finish:
         for event in pygame.event.get():

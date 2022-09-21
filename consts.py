@@ -26,10 +26,10 @@ WIN_COLOR = (89, 89, 89)
 WIN_LOCATION = \
     (0.2 * WINDOW_WIDTH, WINDOW_HEIGHT / 2 - (WIN_FONT_SIZE / 2))
 FIRST_MESSAGE = " Welcome to the cleaning game! " \
-                "Let's clean up our world and keep it clean and happy" \
+                "Let's clean up our world and keep it clean and happy " \
                 "Have Fun!"
-FIRST_FONT_SIZE = int(15)
-FIRST_LOCATION = (500,)
+FIRST_FONT_SIZE = int(20)
+FIRST_LOCATION = (250,200)
 
 SCREEN_ROWS = 10
 SCREEN_COLS = 10
