@@ -1,19 +1,24 @@
 import pygame
 import consts
 import random
+import earth
+
 
 # coloring window
 def draw_window(pic):
     consts.WINDOW.blit(pic, (0, 0))
     pygame.display.update()
 
+
 def draw_garbage(garbages):
-    for gar in range(0, len(garbages)):
-        consts.WINDOW.blit(consts.GARBAGE_PIC, (garbages[gar][0] * consts.STEP, garbages[gar][1] * consts.STEP))
+    for gar in range(0, len(garbages), 2):
+        consts.WINDOW.blit(consts.GARBAGE_LAND_PIC, (garbages[gar][0] * consts.STEP, garbages[gar][1] * consts.STEP))
+
 
 def draw_screen():
     draw_window()
     # draw_garbage(garbages= list)
+
 
 def draw_man():
     consts.WINDOW.blit(consts.GARBAGE_MAN_PIC, [0, 0])
@@ -40,16 +45,21 @@ def draw_first_message():
     draw_message(consts.FIRST_MESSAGE, consts.FIRST_FONT_SIZE, (0, 0, 0), consts.FIRST_LOCATION)
     pygame.display.update()
 
+
 def play():
     pygame.init()
     draw_window(consts.SCREEN_PIC)
     draw_man()
+    l = earth.garbage_indexes()
+    draw_garbage(l)
     draw_first_message()
-    pygame.time.wait(2000)
+    # pygame.time.wait(2000)
     finish = False
     while not finish:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 finish = True
     pygame.quit()
+
+
 play()
