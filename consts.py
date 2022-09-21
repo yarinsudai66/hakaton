@@ -12,3 +12,5 @@ GARBAGE_COUNT = 5
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 500
 FPS = 60
+GARBAGE_MAN_PIC = pygame.image.load(os.path.join('pictures', 'garbage_man.png'))
+SCREEN_PIC = pygame.image.load(os.path.join('pictures', 'screen.png'))

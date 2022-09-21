@@ -24,7 +24,7 @@ def put_garbage():
         if earth[row][col] == consts.EMPTY:
             garbage_count += 1
             for i in range(consts.GARBAGE_WIDTH):
-                    earth[row][col + i] = consts.GARBAGE
+                earth[row][col + i] = consts.GARBAGE
 
 
 def garbage_indexes():
