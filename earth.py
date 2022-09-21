@@ -19,13 +19,12 @@ def empty_screen():
 def put_garbage():
     garbage_count = 0
     while garbage_count < consts.GARBAGE_COUNT:
-        row = random.randint(0, consts.SCREEN_ROWS - consts.GARBAGE_WIDTH - 1)
+        row = random.randint(0, consts.SCREEN_ROWS - 1)
         col = random.randint(0, consts.SCREEN_COLS - consts.GARBAGE_WIDTH - 1)
         if earth[row][col] == consts.EMPTY:
             garbage_count += 1
             for i in range(consts.GARBAGE_WIDTH):
-                for j in range(consts.GARBAGE_WIDTH):
-                    earth[row + j][col + i] = consts.GARBAGE
+                    earth[row][col + i] = consts.GARBAGE
 
 
 def garbage_indexes():
