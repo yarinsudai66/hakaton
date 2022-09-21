@@ -41,11 +41,11 @@ def unite_screen():
     put_garbage()
 
 
-unite_screen()
-for m in range(consts.SCREEN_ROWS):
-    for n in range(consts.SCREEN_COLS):
-        print(earth[m][n], end=" ")
-    print(" ")
+# unite_screen()
+# for m in range(consts.SCREEN_ROWS):
+#     for n in range(consts.SCREEN_COLS):
+#         print(earth[m][n], end=" ")
+#     print(" ")
 
-print(garbage_indexes())
-print(len(garbage_indexes()))
+# print(garbage_indexes())
+# print(len(garbage_indexes()))
