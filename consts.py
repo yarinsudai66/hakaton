@@ -1,16 +1,25 @@
 import pygame
 import os
 
+
+SCREEN_ROWS = 25
+SCREEN_COLS = 50
+EMPTY = "EMPTY"
+GARBAGE = "GARBAGE"
+FLOWER = "FLOWER"
+GARBAGE_WIDTH = 2
+PLAYER_HEIGHT = 4
+PLAYER_WIDTH = 2
+GARBAGE_COUNT = 10
+FLOWER_COUNT = 10
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 500
-WINDOW = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 STEP = 20
-GARBAGE_LAND_PIC ="pass"
-GARBAGE_SEA_PIC ='DF'
-GARBAGE_AIR_PIC = 'DFB'
-SCREEN_SEA_PIC = "pass"
-SCREEN_LAND_PIC = "PASS"
-SCREEN_AIR_PIC ='PASS'
+FPS = 60
+WINDOW = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
+
+GARBAGE_MAN_PIC = pygame.image.load(os.path.join('pics', 'garbage_man.png'))
+SCREEN_PIC = pygame.image.load(os.path.join('pics', 'screen.jpeg'))
 
 pygame.font.init()
 FONT_NAME = "Ariel"
@@ -31,16 +40,3 @@ FIRST_MESSAGE = " Welcome to the cleaning game! " \
 FIRST_FONT_SIZE = int(20)
 FIRST_LOCATION = (250,200)
 
-SCREEN_ROWS = 10
-SCREEN_COLS = 10
-EMPTY = "EMPTY"
-GARBAGE = "GARBAGE"
-GARBAGE_WIDTH = 2
-PLAYER_HEIGHT = 4
-PLAYER_WIDTH = 2
-GARBAGE_COUNT = 5
-WINDOW_WIDTH = 1000
-WINDOW_HEIGHT = 500
-FPS = 60
-GARBAGE_MAN_PIC = pygame.image.load(os.path.join('pics', 'garbage_man.png'))
-SCREEN_PIC = pygame.image.load(os.path.join('pics', 'screen.jpeg'))

@@ -53,5 +53,3 @@ def play():
                 finish = True
     pygame.quit()
 play()
-
-
