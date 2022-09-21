@@ -40,6 +40,7 @@ def play():
     # draw_screen()
     draw_first_message()
 
+
     finish = False
     while not finish:
         for event in pygame.event.get():
