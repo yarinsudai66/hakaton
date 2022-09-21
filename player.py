@@ -1,4 +1,7 @@
-def get_soldier_feet_index(soldier_rect):
-    feet_x = soldier_rect.x
-    feet_y = soldier_rect.y + 1 * (consts.SOLDIER_HEIGHT - 1)
-    return [feet_x, feet_y]
+# checking if solider on a mine
+def is_on_mine(soldier_rect, mines):
+    left_leg = get_soldier_feet_index(soldier_rect)
+    right_leg = [left_leg[0] + 1, left_leg[1]]
+    if left_leg in mines and right_leg in mines:
+        return True
+    return False
