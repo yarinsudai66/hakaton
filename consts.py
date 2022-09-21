@@ -29,7 +29,7 @@ FIRST_MESSAGE = " Welcome to the cleaning game! " \
                 "Let's clean up our world and keep it clean and happy" \
                 "Have Fun!"
 FIRST_FONT_SIZE = int(15)
-FIRST_LOCATION = (20, 20)
+FIRST_LOCATION = (500,)
 
 SCREEN_ROWS = 10
 SCREEN_COLS = 10
@@ -42,5 +42,5 @@ GARBAGE_COUNT = 5
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 500
 FPS = 60
-# GARBAGE_MAN_PIC = pygame.image.load(os.path.join('pictures', 'garbage_man.png'))
-SCREEN_PIC = pygame.image.load(os.path.join('pics', 'screen.png'))
+GARBAGE_MAN_PIC = pygame.image.load(os.path.join('pics', 'garbage_man.png'))
+SCREEN_PIC = pygame.image.load(os.path.join('pics', 'screen.jpeg'))

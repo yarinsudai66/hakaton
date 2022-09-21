@@ -4,7 +4,7 @@ import random
 
 # coloring window
 def draw_window(pic):
-    consts.WINDOW.fill(pic, (0, 0))
+    consts.WINDOW.blit(pic, (0, 0))
     pygame.display.update()
 
 def draw_garbage(garbages):
@@ -14,6 +14,11 @@ def draw_garbage(garbages):
 def draw_screen():
     draw_window()
     # draw_garbage(garbages= list)
+
+def draw_man():
+    consts.WINDOW.blit(consts.GARBAGE_MAN_PIC, [0, 0])
+    pygame.display.flip()
+
 
 def draw_message(message, font_size, color, location):
     font = pygame.font.SysFont(consts.FONT_NAME, font_size)
@@ -36,15 +41,16 @@ def draw_first_message():
     pygame.display.update()
 
 def play():
-    draw_window(consts.SCREEN_PIC, (0, 0, 0))
-    # draw_screen()
-    draw_first_message()
-
-
+    pygame.init()
+    draw_window(consts.SCREEN_PIC)
+    draw_man()
+    # draw_first_message()
     finish = False
     while not finish:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 finish = True
+    pygame.quit()
+play()
 
 
